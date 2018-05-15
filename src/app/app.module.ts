@@ -7,6 +7,7 @@ import {GithubService} from './services/github.service';
 import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 import {ProfileComponent} from './search-users/profile.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {ProfileComponent} from './search-users/profile.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    NgbModule.forRoot()
   ],
   providers: [GithubService],
   bootstrap: [AppComponent]

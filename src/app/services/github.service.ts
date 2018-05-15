@@ -4,18 +4,18 @@ import { Observable} from 'rxjs';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
-import { catchError } from 'rxjs/operators';
-import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GithubService {
   private userName: string;
-  private clientId: string = '60b9f23dedffbdfc476c';
-  private clientSecret: string = 'd1c186c6373f96571c0bfcf76b84e4dc6fd0c15a';
+  private clientId: string;
+  private clientSecret: string;
   constructor(private _http: Http) {
     this.userName = '';
+    this.clientId = '60b9f23dedffbdfc476c';
+    this.clientSecret = 'd1c186c6373f96571c0bfcf76b84e4dc6fd0c15a';
   }
   getUser() {
     if (this.userName) {
