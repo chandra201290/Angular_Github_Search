@@ -11,7 +11,7 @@ app.use(express.static(__dirname + '/dist'));
 
 res.sendFile(path.join(__dirname+'/dist/index.html'));
 });*/
-app.get('*', function (req, res) {
+app.get('/*', function (req, res) {
   const index = path.join(__dirname, 'dist', 'index.html');
   res.sendFile(index);
 });
